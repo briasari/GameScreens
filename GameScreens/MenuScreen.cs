@@ -10,13 +10,18 @@ using System.Windows.Forms;
 
 namespace GameScreens
 {
-    public partial class Form1 : Form
+    public partial class MenuScreen : UserControl
     {
-        public Form1()
+        public MenuScreen()
         {
             InitializeComponent();
+        }
 
+        private void MenuScreen_Load(object sender, EventArgs e)
+        {
             MenuScreen ms = new MenuScreen();
+
+            ms.Location = new Point((this.Width - ms.Width)/2, (this.Height - ms.Height) / 2);
 
             this.Controls.Add(ms);
             ms.Focus();
