@@ -10,15 +10,25 @@ using System.Windows.Forms;
 
 namespace GameScreens
 {
-    public partial class Form1 : Form
+    public partial class GameScreen : UserControl
     {
-        //adding public static vairables allows all forms to access variables
-        //format ex.: Form1.counter++;
-
-        public static int plays = 0;
-        public Form1()
+        public GameScreen()
         {
             InitializeComponent();
+        }
+
+        private void GameScreen_Load(object sender, EventArgs e)
+        {
+            Form1.plays++;
+
+            playsLabel.Text = $"plays: {Form1.plays}";
+        }
+
+        private void gameBackButton_Click(object sender, EventArgs e)
+        {
+            //make button find out which form it's on
+            Form f = this.FindForm();
+            f.Controls.Remove(this);
 
             //add instance of menuscreen
             MenuScreen ms = new MenuScreen();
@@ -28,6 +38,7 @@ namespace GameScreens
 
             //uc and focus
             this.Controls.Add(ms);
+            ms.Focus();
         }
     }
 }

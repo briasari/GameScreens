@@ -19,12 +19,41 @@ namespace GameScreens
 
         private void MenuScreen_Load(object sender, EventArgs e)
         {
-            MenuScreen ms = new MenuScreen();
 
-            ms.Location = new Point((this.Width - ms.Width)/2, (this.Height - ms.Height) / 2);
+        }
 
-            this.Controls.Add(ms);
-            ms.Focus();
+        private void playButton_Click(object sender, EventArgs e)
+        {
+            //make button find out which form it's on
+            Form f = this.FindForm();
+            f.Controls.Remove(this);
+
+            //add instance of gamescreen
+            GameScreen gs = new GameScreen();
+
+            //centre
+            gs.Location = new Point((this.Width - gs.Width) / 2, (this.Height - gs.Height) / 2);
+
+            //uc and focus
+            this.Controls.Add(gs);
+            gs.Focus();
+        }
+
+        private void instructionButton_Click(object sender, EventArgs e)
+        {
+            //make button find out which form it's on
+            Form f = this.FindForm();
+            f.Controls.Remove(this);
+
+            //add instance of instruction screen
+            InstructionScreen IS = new InstructionScreen();
+
+            //centre
+            IS.Location = new Point((this.Width - IS.Width) / 2, (this.Height - IS.Height) / 2);
+
+            //uc and focus
+            this.Controls.Add(IS);
+            IS.Focus();
         }
     }
 }

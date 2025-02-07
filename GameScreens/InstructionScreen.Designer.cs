@@ -1,6 +1,6 @@
 ﻿namespace GameScreens
 {
-    partial class MainScreen
+    partial class InstructionScreen
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,19 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.instructBackButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // MainScreen
+            // instructBackButton
+            // 
+            this.instructBackButton.Location = new System.Drawing.Point(98, 115);
+            this.instructBackButton.Name = "instructBackButton";
+            this.instructBackButton.Size = new System.Drawing.Size(75, 23);
+            this.instructBackButton.TabIndex = 0;
+            this.instructBackButton.Text = "back";
+            this.instructBackButton.UseVisualStyleBackColor = true;
+            this.instructBackButton.Click += new System.EventHandler(this.instructBackButton_Click);
+            // 
+            // InstructionScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Name = "MainScreen";
-            this.Load += new System.EventHandler(this.MainScreen_Load);
+            this.BackColor = System.Drawing.Color.LavenderBlush;
+            this.Controls.Add(this.instructBackButton);
+            this.Name = "InstructionScreen";
+            this.Size = new System.Drawing.Size(275, 272);
+            this.Load += new System.EventHandler(this.InstructionScreen_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button instructBackButton;
     }
 }
