@@ -32,10 +32,10 @@ namespace GameScreens
             GameScreen gs = new GameScreen();
 
             //centre
-            gs.Location = new Point((this.Width - gs.Width) / 2, (this.Height - gs.Height) / 2);
+            gs.Location = new Point((f.Width - gs.Width) / 2, (f.Height - gs.Height) / 2);
 
             //uc and focus
-            this.Controls.Add(gs);
+            f.Controls.Add(gs);
             gs.Focus();
         }
 
@@ -49,10 +49,10 @@ namespace GameScreens
             InstructionScreen IS = new InstructionScreen();
 
             //centre
-            IS.Location = new Point((this.Width - IS.Width) / 2, (this.Height - IS.Height) / 2);
+            IS.Location = new Point((f.Width - IS.Width) / 2, (f.Height - IS.Height) / 2);
 
             //uc and focus
-            this.Controls.Add(IS);
+            f.Controls.Add(IS);
             IS.Focus();
         }
     }

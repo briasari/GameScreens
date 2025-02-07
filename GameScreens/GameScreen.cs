@@ -34,10 +34,10 @@ namespace GameScreens
             MenuScreen ms = new MenuScreen();
 
             //centre
-            ms.Location = new Point((this.Width - ms.Width) / 2, (this.Height - ms.Height) / 2);
+            ms.Location = new Point((f.Width - ms.Width) / 2, (f.Height - ms.Height) / 2);
 
             //uc and focus
-            this.Controls.Add(ms);
+            f.Controls.Add(ms);
             ms.Focus();
         }
     }
