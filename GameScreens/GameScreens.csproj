@@ -64,6 +64,12 @@
     <Compile Include="InstructionScreen.Designer.cs">
       <DependentUpon>InstructionScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginScreen.Designer.cs">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InstructionScreen.resx">
       <DependentUpon>InstructionScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginScreen.resx">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuScreen.resx">
       <DependentUpon>MenuScreen.cs</DependentUpon>

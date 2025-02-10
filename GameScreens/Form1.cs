@@ -21,13 +21,13 @@ namespace GameScreens
             InitializeComponent();
 
             //add instance of menuscreen
-            MenuScreen ms = new MenuScreen();
+            LoginScreen ls = new LoginScreen();
 
             //centre
-            ms.Location = new Point((this.Width - ms.Width) / 2, (this.Height - ms.Height) / 2);
+            ls.Location = new Point((this.Width - ls.Width) / 2, (this.Height - ls.Height) / 2);
 
             //uc and focus
-            this.Controls.Add(ms);
+            this.Controls.Add(ls);
         }
     }
 }
