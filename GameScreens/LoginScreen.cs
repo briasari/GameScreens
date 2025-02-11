@@ -28,7 +28,7 @@ namespace GameScreens
             userAttempt = usernameInput.Text;
             passwordAttempt = passwordInput.Text;
 
-            if (userAttempt == user)
+            if (userAttempt == user && passwordAttempt == password)
             {
                 //make button find out which form it's on
                 Form f = this.FindForm();
